@@ -23,7 +23,7 @@ export default class ProductDetailComponent {
     this.productService.getProduct(this.id()).subscribe((resp) => {
       this.product = resp;
       console.log(this.product);
-      this.rate = Math.round(this.product?.rating.rate ?? 0);
+      this.rate = Math.round(this.product.rating.rate);
     });
   }
 
